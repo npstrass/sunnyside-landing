@@ -1,0 +1,21 @@
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --white: hsl(0, 0%, 100%);
+    --gray-blue: hsl(210, 4%, 67%);
+    --dark-blue-saturated: hsl(212, 27%, 19%);
+    --dark-gray-blue: hsl(232, 10%,55%);
+    --darker-gray-blue: hsl(213, 9%, 39%);
+    --graphic-design-color: hsl(167, 40%, 24%);
+    --photography-text: hsl(198, 62%, 26%);
+    --footer: hsl(168, 34%, 41%);
+
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+    /*
+    font-family: 'Fraunces', serif;
+    font-weight: '700' or '900'
+    */
+}
+
