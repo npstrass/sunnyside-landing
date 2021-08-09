@@ -46,7 +46,8 @@ html, body {
     right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
+    align-items: center;
 }
 
 .logo {
@@ -58,6 +59,29 @@ ul {
 }
 
 .nav {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+}
+
+.nav li {
+    margin-left: 2.5rem;
+}
+
+.btn {
+    background-color: var(--white);
+    color: var(--dark-blue-saturated);
+    font-family: var(--fraunces);
+    font-weight: 900;
+    font-size: .8rem;
+    padding: .75rem 1.5rem;
+    border-radius: 50px;
 }
 
 h1 {
@@ -226,7 +250,7 @@ h2 {
 
 .photo-grid img {
     width: 50%;
-    height: 50vw;
+    height: 35%;
     object-fit: cover;
 }
 
@@ -234,7 +258,7 @@ h2 {
     background-color: var(--footer-bg);
     color: var(--footer);
     text-align: center;
-    height: 50vh;
+    height: 30%;
     padding: 3rem;
 }
 
@@ -273,10 +297,23 @@ h2 {
 
 @media (min-width: 600px) {
 
+    h1{
+        font-size: 2.75rem;
+    }
+
+    .header .logo {
+        font-size: 1.75rem;
+    }
+
     .transform, 
     .stand-out, 
     .text-over-img {
         flex-direction: row;
+    }
+
+    .transform,
+    .stand-out {
+        align-items: center;
     }
 
     .transform img,
@@ -312,8 +349,13 @@ h2 {
 @media (min-width: 800px) {
     .testimonial-wrapper {
         flex-direction: row;
+        margin-bottom: 5rem;
     }
     
+    .testimonial-title {
+        margin-top: 5rem;
+    }
+
     .testimonial {
         margin-left: 2rem;
         margin-right: 2rem;
