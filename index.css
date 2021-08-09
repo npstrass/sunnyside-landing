@@ -64,14 +64,13 @@ ul {
     align-items: center;
 }
 
-@media (max-width: 800px) {
-    .nav {
-        display: none;
-    }
+.hamburger {
+    display: none;
 }
 
 .nav li {
     margin-left: 2.5rem;
+    cursor: pointer;
 }
 
 .btn {
@@ -82,6 +81,48 @@ ul {
     font-size: .8rem;
     padding: .75rem 1.5rem;
     border-radius: 50px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(129, 132, 152, 0.603);
+    color: var(--white)
+}
+
+@media (max-width: 800px) {
+    .toggle {
+        display: none;
+    }
+
+    .nav {
+        z-index: 99;
+        flex-direction: column;
+        background-color: var(--white);
+        color: var(--dark-gray-blue);
+        width: 85%;
+        margin: 0 auto;
+        padding: 0;
+        position: absolute;
+        top: 95%;
+        right: 0;
+        left: 0;
+    }
+
+    .nav li {
+        margin: 1.5rem 0;
+    }
+
+    .btn {
+        background-color: var(--yellow);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
 }
 
 h1 {
@@ -117,9 +158,10 @@ h1 {
 .text-wrapper {
     order: 99;
     width: 85%;
+    max-width: 450px;
     margin: 0 auto;
+    padding: 1rem;
     text-align: center;
-    line-height: 1.75rem;
     color: var(--dark-gray-blue);
     font-size: .9rem;
 }
@@ -132,15 +174,14 @@ h2 {
     font-family: var(--fraunces);
     font-weight: 900;
     font-size: 2em;
-    margin: 3rem auto 1.5rem;
-    line-height: normal;
+    margin-bottom: 2rem;
 }
 
 .learn-more {
     position: relative;
     font-family: var(--fraunces);
     font-weight: 900;
-    margin: 1.5rem auto 3rem;
+    margin-top: 2rem;
 }
 
 .learn-more::after {
@@ -151,7 +192,7 @@ h2 {
     background-color: var(--yellow);
     left: 0;
     right: 0;
-    bottom: 4px;
+    bottom: 0px;
     margin: 0 auto;
     z-index: -1;
     opacity: .35;
@@ -159,6 +200,14 @@ h2 {
 
 .stand-out .learn-more::after {
     background-color: var(--soft-red);
+}
+
+.learn-more:hover {
+    cursor: pointer;
+}
+
+.learn-more:hover::after {
+    opacity: 1;
 }
 
 .graphic, 
@@ -173,6 +222,7 @@ h2 {
     right: 0;
     top: 60%;
     width: 85%;
+    max-width: 450px;
     margin: 0 auto;
     text-align: center;
     font-size: .9rem;
@@ -291,11 +341,23 @@ h2 {
     opacity: .65;
 }
 
+.menu li:hover {
+    cursor: pointer;
+    color: var(--white);
+    opacity: .75;
+}
+
 .socials li {
     margin: 0 .75rem;
 }
 
-@media (min-width: 600px) {
+.socials li:hover {
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    opacity: .75;
+}
+
+@media (min-width: 650px) {
 
     h1{
         font-size: 2.75rem;
@@ -305,33 +367,34 @@ h2 {
         font-size: 1.75rem;
     }
 
-    .transform, 
-    .stand-out, 
+    .transform,
+    .stand-out,
     .text-over-img {
         flex-direction: row;
     }
-
+    
     .transform,
     .stand-out {
         align-items: center;
     }
-
+    
     .transform img,
     .stand-out img {
+        height: 100%;
         width: 50%;
         object-fit: cover;
     }
-
+    
     .transform .text-wrapper {
         order: -1;
     }
-
+    
     .text-wrapper {
+        padding: 0 1rem;
         width: 50%;
-        padding: 3rem;
         text-align: left;
     }
-
+    
     .learn-more::after {
         margin: 0;
     }
